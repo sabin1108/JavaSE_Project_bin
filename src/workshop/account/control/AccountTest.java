@@ -15,5 +15,9 @@ public class AccountTest {
 		System.out.println("잔액=" + account.getBalance());
 		
 		
+		Account account2 = new Account("A1105", "221-22-3488", 100000);
+		System.out.println("고객번호=" + account2.getCustId());
+		System.out.println("계좌번호=" + account2.getAcctId());
+		System.out.println("잔액=" + account2.getBalance());
 	}
 }

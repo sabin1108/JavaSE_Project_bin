@@ -5,6 +5,16 @@ public class Account {
 	private String acctId;
 	private int balance;
 	
+	public Account() {
+		
+	}
+	
+	public Account(String custId, String acctId, int balance) {
+		this.custId = custId;
+		this.acctId = acctId;
+		this.balance = balance;
+	}
+	
 	
 	//Method 선언
 	public String getCustId() {
