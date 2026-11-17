@@ -11,8 +11,12 @@ public class PersonManager {
 		pManager.showPersons(persons);
 		
 		char gender = '여';		
-		System.out.print("성별 " + gender + "은(는)");
-		System.out.println(pManager.findByGender(persons, gender) + " 명 입니다.");		
+		System.out.print("성별 " + gender + " 은(는)");
+		System.out.println(" " + pManager.findByGender(persons, gender) + " 명 입니다.");		
+	
+		String name = "김하늘";
+		pManager.showPerson(persons, name);
+		
 	}
 	
 	//PersonEntity 배열에 값을 채워 넣는 메서드 
@@ -52,7 +56,15 @@ public class PersonManager {
 
 	//입력받은 이름 값과 일치하는 PersonEntity 객체를 찾아서 세부정보를 출력하는 메소드
 	public void showPerson(PersonEntity[] persons, String name) {
-		
+		for(PersonEntity person : persons) {
+			if(person.getName().equals(name)) {
+				System.out.println("[이름] " + person.getName());
+				System.out.println("[성별] " + person.getGender());
+				System.out.println("[전화번호] " + person.getPhone());
+				System.out.println("[주소] " + person.getAddress());
+				break;
+			}
+		}
 	}
 
 
