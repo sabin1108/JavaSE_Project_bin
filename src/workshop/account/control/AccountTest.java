@@ -1,9 +1,11 @@
 package workshop.account.control;
 
 import workshop.account.entity.Account;
+import workshop.account.exception.InsufficientBalanceException;
 
 public class AccountTest {
 	public static void main(String[] args) {
+		try {
 		Account account = new Account();
 		
 		account.setCustId("A1100");
@@ -24,5 +26,10 @@ public class AccountTest {
 		//toString();
 		//getClass().getName() + "@" + Integer.toHaxString(hashCode())
 		System.out.println(account2);
+		}catch (InsufficientBalanceException e){
+			//TODO : handle exception 
+			System.out.println("Error 메시지 =" + e.getMessage() + e.getCurrentBalance());
+	}
+
 	}
 }
