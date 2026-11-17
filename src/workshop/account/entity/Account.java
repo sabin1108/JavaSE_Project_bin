@@ -10,15 +10,19 @@ public class Account {
 	public String getCustId() {
 		return custId;
 	}
+	
 	public void setCustId(String custId) {
 		this.custId = custId;
 	}
+	
 	public String getAcctId() {
 		return acctId;
 	}
+	
 	public void setAcctId(String acctId) {
 		this.acctId = acctId;
 	}
+	
 	public int getBalance() {
 		return balance;
 	}
