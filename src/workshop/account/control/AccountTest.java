@@ -23,6 +23,9 @@ public class AccountTest {
 		System.out.println("계좌번호=" + account2.getAcctId());
 		System.out.println("잔액=" + account2.getBalance());
 		
+		account2.withdraw(60000);
+
+		
 		//toString();
 		//getClass().getName() + "@" + Integer.toHaxString(hashCode())
 		System.out.println(account2);
