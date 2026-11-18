@@ -4,7 +4,7 @@ import workshop.person.entity.PersonEntity;
 
 public class PersonManager {
 	public static void main(String[] args) {
-		PersonManager pManager = new PersonManager(); 
+		PersonManager pManager = new PersonManager();
 		//PersonEntity 배열 선언 및 생성
 		PersonEntity[ ] persons = new PersonEntity[10]; 
 		pManager.fillPersons(persons);
