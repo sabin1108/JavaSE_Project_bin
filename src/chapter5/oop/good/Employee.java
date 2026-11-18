@@ -1,6 +1,6 @@
 package chapter5.oop.good;
 
-public class Employee {
+public abstract class Employee {
 	private String name;
 	protected double salary;
 
@@ -25,5 +25,5 @@ public class Employee {
 	public double getSalary() {
 	    return this.salary;
 	}
-
+	public abstract void manageSalary(double rate);
 }

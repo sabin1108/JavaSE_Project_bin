@@ -3,9 +3,25 @@ package chapter5.oop.good;
 public class InFlexibleCompanyDemo {
     public static void main(String[] args) {
         
-        MereClerk mereClerk1 = new MereClerk("철수", 100);
-        MereClerk mereClerk2 = new MereClerk("영희", 100);
-        Manager manager = new Manager("홍길동", 200);
+    	Employee mereClerk1 = new MereClerk("철수", 100);
+    	Employee mereClerk2 = new MereClerk("영희", 100);
+
+    	Employee manager = new Manager("홍길동", 200, "인사부"); //(1) List list = new ArrayList();
+    	Manager manager2 = new Manager("둘리", 250, "개발부");  //(2) ArrayList list2 = new ArrayList();
+    	
+  
+    	//Employee 타입 
+    	System.out.println(manager.getName() + " " + manager.getSalary());
+    	//Casting Employee를 Manager로 형변환
+    	Manager m = (Manager)manager;
+    	m.getDepartment();
+    	
+    	//Manager 타입
+    	System.out.println(manager2.getName() + " " + manager2.getSalary() + " " + manager2.getDepartment());
+    	
+//        MereClerk mereClerk1 = new MereClerk("철수", 100);
+//        MereClerk mereClerk2 = new MereClerk("영희", 100);
+//        Manager manager = new Manager("홍길동", 200);
 
         
         
